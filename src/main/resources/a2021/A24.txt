@@ -1,0 +1,467 @@
+inp w
+ _1
+mul x 0
+ 0
+add x z
+ 0
+mod x 26
+ 0
+div z 1
+ 0
+add x 15
+ 15
+eql x w
+ 0
+eql x 0
+ 1
+mul y 0
+ 0
+add y 25
+ 25
+mul y x
+ 25
+add y 1
+ 26
+mul z y
+ 0
+mul y 0
+ 0
+add y w
+ _1
+add y 4
+ _1 + 4
+mul y x
+ _1 + 4
+add z y
+ _1 + 4
+inp w
+ _2
+mul x 0
+ 0
+add x z
+ _1 + 4
+mod x 26
+ _1 + 4
+div z 1
+ _1 + 4
+add x 14
+ _1 + 20
+eql x w
+ 0
+eql x 0
+ 1
+mul y 0
+ 0
+add y 25
+ 25
+mul y x
+ 25
+add y 1
+ 26
+mul z y
+ _1 + 4) * 26
+mul y 0
+ 0
+add y w
+ _2
+add y 16
+ _2 + 16
+mul y x
+ _2 + 16
+add z y
+ _1 + 4) * 26) + _2 + 16
+inp w
+ _3
+mul x 0
+ 0
+add x z
+ _1 + 4) * 26) + _2 + 16
+mod x 26
+ _2 + 16
+div z 1
+ _1 + 4) * 26) + _2 + 16
+add x 11
+ _2 + 27
+eql x w
+ 0
+eql x 0
+ 1
+mul y 0
+ 0
+add y 25
+ 25
+mul y x
+ 25
+add y 1
+ 26
+mul z y
+ _1 + 4) * 26) + _2 + 16) * 26
+mul y 0
+ 0
+add y w
+ _3
+add y 14
+ _3 + 14
+mul y x
+ _3 + 14
+add z y
+ _1 + 4) * 26) + _2 + 16) * 26) + _3 + 14
+inp w
+ _4
+mul x 0
+ 0
+add x z
+ _1 + 4) * 26) + _2 + 16) * 26) + _3 + 14
+mod x 26
+ _3 + 14
+div z 26
+ _1 + 4) * 26) + _2 + 16
+add x -13
+ _3 + 1
+eql x w
+ _3 + 1 == _4: 1
+eql x 0
+ 0
+mul y 0
+ 0
+add y 25
+ 25
+mul y x
+ 0
+add y 1
+ 1
+mul z y
+ _1 + 4) * 26) + _2 + 16
+mul y 0
+ 0
+add y w
+ _4
+add y 3
+ _4 + 3
+mul y x
+ 0
+add z y
+ _1 + 4) * 26) + _2 + 16
+inp w
+ _5
+mul x 0
+ 0
+add x z
+ _1 + 4) * 26) + _2 + 16
+mod x 26
+ _2 + 16
+div z 1
+ _1 + 4) * 26) + _2 + 16
+add x 14
+ _2 + 30
+eql x w
+ 0
+eql x 0
+ 1
+mul y 0
+ 0
+add y 25
+ 25
+mul y x
+ 25
+add y 1
+ 26
+mul z y
+ _1 + 4) * 26) + _2 + 16) * 26
+mul y 0
+ 0
+add y w
+ _5
+add y 11
+ _5 + 11
+mul y x
+ _5 + 11
+add z y
+ _1 + 4) * 26) + _2 + 16) * 26) + _5 + 11
+inp w
+ _6
+mul x 0
+ 0
+add x z
+ _1 + 4) * 26) + _2 + 16) * 26) + _5 + 11
+mod x 26
+ _5 + 11
+div z 1
+ _1 + 4) * 26) + _2 + 16) * 26) + _5 + 11
+add x 15
+ _5 + 26
+eql x w
+ 0
+eql x 0
+ 1
+mul y 0
+ 0
+add y 25
+ 25
+mul y x
+ 25
+add y 1
+ 26
+mul z y
+ _1 + 4) * 26) + _2 + 16) * 26) + _5 + 11) * 26
+mul y 0
+ 0
+add y w
+ _6
+add y 13
+ _6 + 13
+mul y x
+ _6 + 13
+add z y
+ _1 + 4) * 26) + _2 + 16) * 26) + _5 + 11) * 26) + _6 + 13
+inp w
+ _7
+mul x 0
+add x z
+mod x 26
+ _6 + 13
+div z 26
+ _1 + 4) * 26) + _2 + 16) * 26) + _5 + 11
+add x -7
+ _6 + 6
+eql x w
+ _6 + 6 == _7: 1
+eql x 0
+ 0
+mul y 0
+ 0
+add y 25
+ 25
+mul y x
+ 0
+add y 1
+ 1
+mul z y
+ _1 + 4) * 26) + _2 + 16) * 26) + _5 + 11
+mul y 0
+ 0
+add y w
+ _7
+add y 11
+ _7 + 11
+mul y x
+ 0
+add z y
+ _1 + 4) * 26) + _2 + 16) * 26) + _5 + 11
+inp w
+ _8
+mul x 0
+add x z
+mod x 26
+ _5 + 11
+div z 1
+ _1 + 4) * 26) + _2 + 16) * 26) + _5 + 11
+add x 10
+ _5 + 21
+eql x w
+ 0
+eql x 0
+ 1
+mul y 0
+add y 25
+mul y x
+add y 1
+ 26
+mul z y
+ _1 + 4) * 26) + _2 + 16) * 26) + _5 + 11) * 26
+mul y 0
+add y w
+add y 7
+mul y x
+ _8 + 7
+add z y
+ _1 + 4) * 26) + _2 + 16) * 26) + _5 + 11) * 26) + _8 + 7
+inp w
+ _9
+mul x 0
+ 0
+add x z
+mod x 26
+ _8 + 7
+div z 26
+ _1 + 4) * 26) + _2 + 16) * 26) + _5 + 11
+add x -12
+eql x w
+ _8 - 5 == _9: 1
+eql x 0
+ 0
+mul y 0
+add y 25
+mul y x
+add y 1
+ 1
+mul z y
+ _1 + 4) * 26) + _2 + 16) * 26) + _5 + 11
+mul y 0
+ 0
+add y w
+ _9
+add y 12
+ _9 + 12
+mul y x
+ 0
+add z y
+ _1 + 4) * 26) + _2 + 16) * 26) + _5 + 11
+inp w
+ _10
+mul x 0
+ 0
+add x z
+mod x 26
+ _5 + 11
+div z 1
+ _1 + 4) * 26) + _2 + 16) * 26) + _5 + 11
+add x 15
+ _5 + 26
+eql x w
+ 0
+eql x 0
+ 1
+mul y 0
+add y 25
+mul y x
+add y 1
+ 26
+mul z y
+ _1 + 4) * 26) + _2 + 16) * 26) + _5 + 11) * 26
+mul y 0
+ 0
+add y w
+ _10
+add y 15
+ _10 + 15
+mul y x
+add z y
+ _1 + 4) * 26) + _2 + 16) * 26) + _5 + 11) * 26) + _10 + 15
+inp w
+ _11
+mul x 0
+ 0
+add x z
+mod x 26
+ _10 + 15
+div z 26
+ _1 + 4) * 26) + _2 + 16) * 26) + _5 + 11
+add x -16
+ _10 - 1
+eql x w
+ _10 - 1 == _11: 1
+eql x 0
+ 0
+mul y 0
+add y 25
+mul y x
+add y 1
+ 1
+mul z y
+ _1 + 4) * 26) + _2 + 16) * 26) + _5 + 11
+mul y 0
+add y w
+add y 13
+mul y x
+ 0
+add z y
+inp w
+ _12
+mul x 0
+add x z
+mod x 26
+ _5 + 11
+div z 26
+ _1 + 4) * 26) + _2 + 16
+add x -9
+ _5 + 2
+eql x w
+ _5 + 2 == _12: 1
+eql x 0
+ 0
+mul y 0
+add y 25
+mul y x
+add y 1
+ 1
+mul z y
+ _1 + 4) * 26) + _2 + 16
+mul y 0
+add y w
+add y 1
+mul y x
+ 0
+add z y
+ _1 + 4) * 26) + _2 + 16
+inp w
+ _13
+mul x 0
+add x z
+mod x 26
+ _2 + 16
+div z 26
+ _1 + 4
+add x -8
+ _2 + 8
+eql x w
+ _2 + 8 == _13: 1
+eql x 0
+ 0
+mul y 0
+add y 25
+mul y x
+add y 1
+ 1
+mul z y
+ _1 + 4
+mul y 0
+add y w
+add y 15
+mul y x
+ 0
+add z y
+ _1 + 4
+inp w
+ _14
+mul x 0
+add x z
+mod x 26
+ _1 + 4
+div z 26
+ 0
+add x -8
+ _1 - 4
+eql x w
+ _1 - 4 == _14: 1
+eql x 0
+ 0
+mul y 0
+add y 25
+mul y x
+add y 1
+ 1
+mul z y
+ 0
+mul y 0
+ 0
+add y w
+ _14
+add y 4
+ _14 + 4
+mul y x
+ 0
+add z y
+
+
+ _3 + 1 == _4
+ _6 + 6 == _7
+ _8 - 5 == _9
+ _10 - 1 == _11
+ _5 + 2 == _12
+ _2 + 8 == _13
+ _1 - 4 == _14
+
+99999999999999
+91897399498995
+51121176121391
