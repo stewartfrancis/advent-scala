@@ -6,12 +6,12 @@ object A11 extends App {
 
   val lines = util.loadInputLines(getClass).toList
 
-  val emptyRowIndicies = lines
+  val emptyRowIndices = lines
     .zipWithIndex
     .filter(_._1.forall('.'.equals))
     .map(_._2)
 
-  val emptyColIndicies = util.toCoords(lines)
+  val emptyColIndices = util.toCoords(lines)
     .groupBy(_._1.c)
     .filter(_._2.forall(_._2.equals('.')))
     .keys
@@ -27,10 +27,10 @@ object A11 extends App {
       .map(i => {
         val smallRow = i._1.r.min(i._2.r).toLong
         val bigRow = i._1.r.max(i._2.r).toLong
-        val emptyRowsCrossed = emptyRowIndicies.count(r => r >= smallRow && r <= bigRow)
+        val emptyRowsCrossed = emptyRowIndices.count(r => r >= smallRow && r <= bigRow)
         val smallCol = i._1.c.min(i._2.c).toLong
         val bigCol = i._1.c.max(i._2.c).toLong
-        val emptyColsCrossed = emptyColIndicies.count(r => r >= smallCol && r <= bigCol)
+        val emptyColsCrossed = emptyColIndices.count(r => r >= smallCol && r <= bigCol)
         (bigRow - smallRow) + (emptyRowsCrossed * (factor - 1)) + (bigCol - smallCol) + (emptyColsCrossed * (factor - 1))
       })
       .sum / 2
