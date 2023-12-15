@@ -1,52 +1,26 @@
 package a2023
 
-import scala.collection.immutable.ListMap
+import util.Coord
 
 object A10 extends App {
   val lines = util.loadInputLines(getClass).toList
 
   //Convert the input into an coordinate space and put it into a map
   //(x, y) -> value
-  val map = ListMap(lines
-    .map(_.toList.zipWithIndex)
-    .zipWithIndex
-    .flatMap(c => c._1.map(r => (Coord(c._2, r._2), r._1)))
-    : _*)
-
-  case class Coord(r: Int, c: Int) {
-    //return coords of a relative location mapped by an int representing N to NW
-    def move(dir: Int): Coord = dir match {
-      case 0 => Coord(r - 1, c)
-      case 1 => Coord(r - 1, c + 1)
-      case 2 => Coord(r, c + 1)
-      case 3 => Coord(r + 1, c + 1)
-      case 4 => Coord(r + 1, c)
-      case 5 => Coord (r + 1, c - 1)
-      case 6 => Coord(r, c - 1)
-      case 7 => Coord(r - 1, c - 1)
-    }
-
-    //get a list of neighbouring coordinates described by a range modulo 8
-    def neighbours(from: Int, to: Int): List[Coord] = {
-      Range.inclusive(from, to).map(i => move(i % 8)).toList
-    }
-
-    //get the value of this coordinate
-    def value: Char = map(this)
-  }
+  val map = util.toCoords(lines)
 
   //walk a path from a supplied start location, and the direction of travel to the next coordinate
   case class PathIterator(initial: Coord, dir: Int) extends Iterator[(Coord, List[Coord], List[Coord])] {
     private var n: (Coord, (Int, List[Coord], List[Coord])) = (initial, (dir, List(), List()))
     var started = false
 
-    override def hasNext: Boolean = !started || n._1.value != 'S'
+    override def hasNext: Boolean = !started || A10.map(n._1) != 'S'
 
     //return a tuple of (coordinates of the next path square, coordinates of the cells on the left, and coords on the right
     def next(prev: (Coord, Int)): (Coord, (Int, List[Coord], List[Coord])) = {
       val c = prev._1
       val d = prev._2
-      val nextDir: (Int, List[Coord], List[Coord]) = c.value match {
+      val nextDir: (Int, List[Coord], List[Coord]) = A10.map(c) match {
         case 'L' =>
           val a = c.neighbours(1, 1)
           val b = c.neighbours(3, 7)
